@@ -1,0 +1,40 @@
+.toolbar {
+    margin-top: 1rem;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.337);
+}
+
+.toolbar-group {
+    
+    background-color: rgb(207, 207, 207);
+    padding: 0.25rem 1.5rem;
+    border: 1px solid rgb(161, 161, 161);
+    border-radius: 2rem;
+}
+.toolbar-group button {
+    min-height: 2rem;
+    min-width: 2rem;
+
+    padding: 0.5rem;
+    margin: 0 0.08rem;
+    
+
+    border: none;
+    border-radius: 0.3rem;
+    background-color: transparent;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.toolbar-group button:hover{
+    background-color: rgba(130, 130, 130, 0.3);
+    color: rgba(0, 0, 0, 1);
+}
+
+.toolbar-group button.is-active {
+    background-color: rgba(143, 143, 143, 0.65);
+    color: rgba(0, 0, 0, 1);
+}
