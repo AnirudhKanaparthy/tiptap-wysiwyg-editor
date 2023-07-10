@@ -19,11 +19,7 @@ import Toolbar from './Toolbar';
 
 
 export default function Editor() {
-    const [editorContent, setEditorContent] = useState({});
-
-    const defaultFont = {
-        fontFamily: 'Inter',
-    }
+    const [editorContent, setEditorContent] = useState("");
 
     const editor = useEditor({
         extensions: [
@@ -40,12 +36,11 @@ export default function Editor() {
             OrderedList,
         ],
         onUpdate: ({ editor }) => {
-            setEditorContent(editor.getJSON());
-            console.log(editor.getHTML());
+            setEditorContent(editor.getHTML());
         },
         autofocus: true,
     })
-
+    console.log(editorContent);
     return (
         <div className="editor">
             <Toolbar editor={editor} />

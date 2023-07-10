@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Dropdown.css'
 
+
 function DownIcon() {
     return (
         <svg height="20" width="20" viewBox="0 0 20 20">
@@ -9,17 +10,16 @@ function DownIcon() {
     );
 }
 
-export function DropdownItem({ children, style, item, label, handleClick }) {
+export function DropdownItem({ children, style, handleClick }) {
     return (
-        <div onClick={() => handleClick(item)} className='dropdown-item'>
+        <div style={style} onClick={handleClick} className='dropdown-item'>
             {children}
-            <div style={style}>{label}</div>
         </div>
     );
 }
 
 
-export default function Dropdown({ width, direction, inputStyle, selectedOption, children }) {
+export default function Dropdown({ width, direction, selectedOption, children }) {
     const [showMenu, setShowMenu] = useState(false);
 
     useEffect(() => {
@@ -42,9 +42,8 @@ export default function Dropdown({ width, direction, inputStyle, selectedOption,
                 <div style={{ width: `${width}ch` }} className='dropdown-selected-option'>{selectedOption}</div>
                 <div className='dropdown-icon'><DownIcon /></div>
             </div>
-            {showMenu && <div style={{ flexDirection: direction }} className='dropdown-menu'>
-                {children}
-            </div>}
+            {showMenu &&
+                <div style={{ flexDirection: direction }} className='dropdown-menu'>{children}</div>}
         </div>
     )
 }

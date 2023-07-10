@@ -1,0 +1,10 @@
+.toolbar-divider {
+  min-height: 1.5rem;
+
+  vertical-align: middle;
+
+  display: inline-block;
+  margin: 0 0.1rem;
+  border-left: 1px solid rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5);
+}
