@@ -50,10 +50,10 @@
 
 .editor {
   background-color: white;
-  height: 70vh;
-  width: 90%;
+  min-height: 70vh;
+  width: 50%;
 
-  border: 2px solid rgba(97, 97, 97, 0.1);
+  border: none;
   border-radius: 0.3rem;
 }
 
